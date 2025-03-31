@@ -1,7 +1,7 @@
 // src/api.js
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api"; // Задайте правильний URL для вашого API
+const API_URL = "https://calorietracker-7x32.onrender.com/api"; // Задайте правильний URL для вашого API
 
 export const loginUser = async (username, password) => {
   try {

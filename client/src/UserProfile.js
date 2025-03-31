@@ -54,7 +54,7 @@ const UserProfile = () => {
                 return;
             }
 
-            const response = await fetch("http://localhost:5000/api/calories", {
+            const response = await fetch("https://calorietracker-7x32.onrender.com/api/calories", {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             });
@@ -93,7 +93,7 @@ const UserProfile = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/profile', {
+        const response = await axios.get('https://calorietracker-7x32.onrender.com/api/profile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(response.data);

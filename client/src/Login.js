@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const response = await axios.post('https://calorietracker-7x32.onrender.com/api/auth/login', formData);
       console.log('Login successful:', response.data);
       
       // Зберігаємо токен в localStorage

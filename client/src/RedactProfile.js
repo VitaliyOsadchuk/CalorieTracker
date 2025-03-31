@@ -28,7 +28,7 @@ const EditUserProfile = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/profile', {
+        const response = await axios.get('https://calorietracker-7x32.onrender.com/api/profile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(response.data);
@@ -73,7 +73,7 @@ const EditUserProfile = () => {
       };
 
       await axios.put(
-        'http://localhost:5000/api/redact',
+        'https://calorietracker-7x32.onrender.com/api/redact',
         { ...updatedUserData },
         {
           headers: { Authorization: `Bearer ${token}` },

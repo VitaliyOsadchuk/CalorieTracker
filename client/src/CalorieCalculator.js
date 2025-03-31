@@ -21,7 +21,7 @@ const CalorieCalculator = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/api/calories', {
+      const response = await axios.get('https://calorietracker-7x32.onrender.com/api/calories', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCaloriesRecords(response.data);
@@ -49,7 +49,7 @@ const CalorieCalculator = () => {
 
         // Тут час уже в форматі HH:mm, так що можна передавати його без змін
         const response = await axios.post(
-            'http://localhost:5000/api/calories',
+            'https://calorietracker-7x32.onrender.com/api/calories',
             { foodName, calories, time },
             {
                 headers: { Authorization: `Bearer ${token}` },
@@ -74,7 +74,7 @@ const CalorieCalculator = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:5000/api/calories/${recordId}`, {
+      await axios.delete(`https://calorietracker-7x32.onrender.com/api/calories/${recordId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -93,7 +93,7 @@ const CalorieCalculator = () => {
         return;
       }
 
-      await axios.delete('http://localhost:5000/api/calories', {
+      await axios.delete('https://calorietracker-7x32.onrender.com/api/calories', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -111,7 +111,8 @@ const CalorieCalculator = () => {
     <div className="container">
       <div className="calorie-calculator">
         <div className='top'>
-        <h1>Новий запис</h1>
+          <div className='hButton'><button onClick={() => navigate('/profile')}>Назад</button>
+          <h1>Новий запис</h1></div>
             <form onSubmit={handleAddRecord}>
               <div className="row">
                 <label>Назва їжі:</label>

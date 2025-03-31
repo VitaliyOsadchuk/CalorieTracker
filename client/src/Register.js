@@ -45,7 +45,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post('https://calorietracker-7x32.onrender.com/api/auth/register', formData);
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
