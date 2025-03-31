@@ -5,6 +5,9 @@ const cors = require("cors");
 const User = require("./models/User"); // Ваша модель користувача
 const jwt = require('jsonwebtoken');
 
+
+
+
 // Створення Express додатку
 const app = express();
 app.use(express.json());
@@ -39,6 +42,11 @@ const authenticateToken = (req, res, next) => {
 
     //     }
     // ));
+
+app.get("/", (req,res) => {
+    res.json("Hello!");
+});
+
 
 // Реєстрація користувача
 app.post("/api/auth/register", async (req, res) => {
