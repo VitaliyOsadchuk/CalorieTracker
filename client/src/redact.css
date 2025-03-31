@@ -1,0 +1,70 @@
+h2{
+    font-size: clamp(24px, 3vw, 40px);
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+.redactCont label{
+    float: left;
+    font-size: clamp(16px, 3vh, 30px);
+    line-height: 1;
+    font-weight: 500;
+    color: #0d2123;
+    width: 40%;
+    text-align: center;
+  
+}
+
+.redactCont select, .redactCont input{
+    font-size: clamp(16px, 3vh, 30px);
+    border: 1px solid black;
+    border-radius: 10px;
+    float: right;
+    width: 60%;
+}
+
+.redactCont{
+    border: 1.5px solid black;
+    border-radius: 12px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 2%;
+}
+
+.redactCont .newPass, .newPass{
+    border: 2px solid red;
+}
+
+.error-message{
+    font-size: clamp(16px, 3vh, 30px);
+    color: rgb(188, 73, 73);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+@media (max-width: 750px) {
+    .redactCont{
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .redactCont select, .redactCont input{
+        width: 80%;
+        margin-bottom: 1vh;
+    }
+
+    .redactCont label{
+        width: 80%;
+    }
+}
+
+
+
